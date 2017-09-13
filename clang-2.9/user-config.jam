@@ -1,0 +1,23 @@
+using clang : 2.9 : clang++-2.9 : ; # default same as 2.9~c++98
+using clang : 2.9~c++98 : clang++-2.9 : <cxxflags>"-std=c++98" ;
+using clang : 2.9~gnu98 : clang++-2.9 : <cxxflags>"-std=gnu++98" ;
+using clang : 2.9~c++11 : clang++-2.9 : <cxxflags>"-std=c++11" ;
+using clang : 2.9~gnu11 : clang++-2.9 : <cxxflags>"-std=gnu++11" ;
+
+
+using python
+: 2.7 # version
+: # Interpreter/path to dir
+: /usr/include/python2.7 # includes
+: /usr/lib/x86_64-linux-gnu # libs
+: # conditions
+;
+
+using python 
+: 3.4 # version
+: # Interpreter/path to dir
+: /usr/include/python3.4 # includes
+: /usr/lib/x86_64-linux-gnu # libs
+: # conditions
+;
+

@@ -1,0 +1,18 @@
+${toolsets}
+
+using python
+: 2.7 # version
+: # Interpreter/path to dir
+: /usr/include/python2.7 # includes
+: /usr/lib/ # libs
+: # conditions
+;
+
+using python 
+: 3.2 # version
+: # Interpreter/path to dir
+: /usr/include/python3.2 # includes
+: /usr/lib # libs
+: # conditions
+;
+

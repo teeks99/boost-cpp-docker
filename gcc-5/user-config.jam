@@ -1,0 +1,29 @@
+using gcc : 5 : g++-5 : ; # Default is same as 5~c++98
+using gcc : 5~c++98 : g++-5 : <cxxflags>"-std=c++98" ;
+using gcc : 5~gnu98 : g++-5 : <cxxflags>"-std=gnu++98" ;
+using gcc : 5~c++11 : g++-5 : <cxxflags>"-std=c++11" ;
+using gcc : 5~gnu11 : g++-5 : <cxxflags>"-std=gnu++11" ;
+using gcc : 5~c++14 : g++-5 : <cxxflags>"-std=c++14" ;
+using gcc : 5~gnu14 : g++-5 : <cxxflags>"-std=gnu++14" ;
+using gcc : 5~c++1z : g++-5 : <cxxflags>"-std=c++1z" ;
+using gcc : 5~gnu1z : g++-5 : <cxxflags>"-std=gnu++1z" ;
+using gcc : 5~c++1z~O2 : g++-5 : <cxxflags>"-std=c++1z -O2" ;
+using gcc : 5~c++1z~warn : g++-5 : <cxxflags>"-std=c++1z -Wall -Wextra" ;
+
+
+using python
+: 2.7 # version
+: # Interpreter/path to dir
+: /usr/include/python2.7 # includes
+: /usr/lib/x86_64-linux-gnu # libs
+: # conditions
+;
+
+using python 
+: 3.4 # version
+: # Interpreter/path to dir
+: /usr/include/python3.4 # includes
+: /usr/lib/x86_64-linux-gnu # libs
+: # conditions
+;
+

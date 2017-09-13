@@ -1,0 +1,27 @@
+using gcc : 4.8 : g++-4.8 : ; # Default is same as 4.8~c++98
+using gcc : 4.8~c++98 : g++-4.8 : <cxxflags>"-std=c++98" ;
+using gcc : 4.8~gnu98 : g++-4.8 : <cxxflags>"-std=gnu++98" ;
+using gcc : 4.8~c++11 : g++-4.8 : <cxxflags>"-std=c++11" ;
+using gcc : 4.8~gnu11 : g++-4.8 : <cxxflags>"-std=gnu++11" ;
+using gcc : 4.8~c++1y : g++-4.8 : <cxxflags>"-std=c++1y" ;
+using gcc : 4.8~gnu1y : g++-4.8 : <cxxflags>"-std=gnu++1y" ;
+using gcc : 4.8~c++1y~O2 : g++-4.8 : <cxxflags>"-std=c++1y -O2" ;
+using gcc : 4.8~c++1y~warn : g++-4.8 : <cxxflags>"-std=c++1y -Wall -Wextra" ;
+
+
+using python
+: 2.7 # version
+: # Interpreter/path to dir
+: /usr/include/python2.7 # includes
+: /usr/lib # libs
+: # conditions
+;
+
+using python 
+: 3.4 # version
+: # Interpreter/path to dir
+: /usr/include/python3.4 # includes
+: /usr/lib # libs
+: # conditions
+;
+

@@ -1,0 +1,28 @@
+#using gcc : 4.8 : g++-4.8 : <cxxflags>"-Wno-c99-extensions" ; 
+using clang : 3.3 : clang++-3.3 : <cxxflags>"-Wno-c99-extensions" ; #default same as 3.3~c++98
+using clang : 3.3~c++98 : clang++-3.3 : <cxxflags>"-Wno-c99-extensions -std=c++98" ;
+using clang : 3.3~gnu98 : clang++-3.3 : <cxxflags>"-Wno-c99-extensions -std=gnu++98" ;
+using clang : 3.3~c++11 : clang++-3.3 : <cxxflags>"-Wno-c99-extensions -std=c++11" ;
+using clang : 3.3~gnu11 : clang++-3.3 : <cxxflags>"-Wno-c99-extensions -std=gnu++11" ;
+using clang : 3.3~c++1y : clang++-3.3 : <cxxflags>"-Wno-c99-extensions -std=c++1y" ;
+using clang : 3.3~gnu1y : clang++-3.3 : <cxxflags>"-Wno-c99-extensions -std=gnu++1y" ;
+using clang : 3.3~c++1y~O2 : clang++-3.3 : <cxxflags>"-Wno-c99-extensions -std=c++1y -O2" ;
+using clang : 3.3~c++1y~warn : clang++-3.3 : <cxxflags>"-Wno-c99-extensions -std=c++1y -Wall -Wextra" ;
+
+
+using python
+: 2.7 # version
+: # Interpreter/path to dir
+: /usr/include/python2.7 # includes
+: /usr/lib # libs
+: # conditions
+;
+
+using python 
+: 3.4 # version
+: # Interpreter/path to dir
+: /usr/include/python3.4 # includes
+: /usr/lib # libs
+: # conditions
+;
+

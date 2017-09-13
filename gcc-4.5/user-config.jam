@@ -1,0 +1,25 @@
+using gcc : 4.5 : g++-4.5 : ; # Default is same as 4.5~c++98
+using gcc : 4.5~c++98 : g++-4.5 : <cxxflags>"-std=c++98" ;
+using gcc : 4.5~gnu98 : g++-4.5 : <cxxflags>"-std=gnu++98" ;
+using gcc : 4.5~c++0x : g++-4.5 : <cxxflags>"-std=c++0x" ;
+using gcc : 4.5~gnu0x : g++-4.5 : <cxxflags>"-std=gnu++0x" ;
+using gcc : 4.5~c++0x~O2 : g++-4.5 : <cxxflags>"-std=c++0x -O2" ;
+using gcc : 4.5~c++0x~warn : g++-4.5 : <cxxflags>"-std=c++0x -Wall -Wextra" ;
+
+
+using python
+: 2.7 # version
+: # Interpreter/path to dir
+: /usr/include/python2.7 # includes
+: /usr/lib # libs
+: # conditions
+;
+
+using python 
+: 3.2 # version
+: # Interpreter/path to dir
+: /usr/include/python3.2 # includes
+: /usr/lib # libs
+: # conditions
+;
+
