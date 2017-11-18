@@ -5,6 +5,7 @@ MAINTAINER Thomas Kent <docker@teeks99.com>
 RUN apt-get update \
  && apt-get install -y software-properties-common \
  && add-apt-repository -y ppa:git-core/ppa \
+ && add-apt-repository -y ppa:anthony-justsoftwaresolutions/libcxx \
 # Install pre-reqs
  && apt-get update \
  && apt-get install -y \
