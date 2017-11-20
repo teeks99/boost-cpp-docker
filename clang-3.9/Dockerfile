@@ -31,7 +31,3 @@ RUN apt-get update && apt-get install -y clang-3.9 libc++-dev libc++abi-dev
 # Add the tool configs
 ADD user-config.jam /
 
-# Fix a ubuntu bug
-ADD fix_string.py /
-RUN python fix_string.py 
-

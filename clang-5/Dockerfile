@@ -37,7 +37,3 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 6084F3CF814B57C1CF12EFD5
 # Add the tool configs
 ADD user-config.jam /
 
-# Fix a ubuntu bug
-ADD fix_string.py /
-RUN python fix_string.py 
-
