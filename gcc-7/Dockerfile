@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM teeks99/gcc-ubuntu:7
 MAINTAINER Thomas Kent <docker@teeks99.com>
 
 # Pre-Req Repos
@@ -22,13 +22,6 @@ RUN apt-get update \
  && ln -s python2.7 python \
 # Speed up fetch
  && git config --global submodule.fetchJobs 40
-# Enable Compiler Repo
-RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
-# Install Tool
- && apt-get update \
- && apt-get install -y gcc-7 g++-7
-
-# Symlink tools
 
 # Add the tool configs
 ADD user-config.jam /
