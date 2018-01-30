@@ -13,14 +13,13 @@ RUN apt-get update \
   build-essential \
   git \
   wget \
+  python \
   python2.7 \
   python2.7-dev \
   python3.5 \
   python3.5-dev \
   libbz2-dev \
-  zlib1g-dev \
- && cd /usr/bin \
- && ln -s python2.7 python
+  zlib1g-dev
 
 # Add the tool configs
 ADD user-config.jam /

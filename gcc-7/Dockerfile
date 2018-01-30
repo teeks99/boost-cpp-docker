@@ -12,14 +12,13 @@ RUN apt-get update \
   build-essential \
   git \
   wget \
+  python \
   python2.7 \
   python2.7-dev \
   python3.5 \
   python3.5-dev \
   libbz2-dev \
   zlib1g-dev \
- && cd /usr/bin \
- && ln -s python2.7 python \
 # Speed up fetch
  && git config --global submodule.fetchJobs 40
 
