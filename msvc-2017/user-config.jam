@@ -1,0 +1,17 @@
+using msvc ;
+
+using python
+: 2.7 # version
+: # Interpreter/path to dir
+: c:\\tools\\python2\\include # includes
+: c:\\tools\\python2\\libs # libs
+: # conditions
+;
+
+using python 
+: 3.5 # version
+: # Interpreter/path to dir
+: c:\\tools\\python3\\include # includes
+: c:\\tools\\python3\\libs # libs
+: # conditions
+;
