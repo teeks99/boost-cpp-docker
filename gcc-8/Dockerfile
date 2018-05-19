@@ -15,9 +15,18 @@ RUN apt-get update \
   python \
   python2.7 \
   python2.7-dev \
+  python-numpy \
   python3.5 \
   python3.5-dev \
+  python3-numpy \
+  libjpeg-dev \
+  libpng-dev \
+  libssl-dev \
+  libtiff-dev \
   libbz2-dev \
+  liblzma-dev \
+  libicu-dev \
+  libopenmpi-dev \
   zlib1g-dev \
 # Speed up fetch
  && git config --global submodule.fetchJobs 40
