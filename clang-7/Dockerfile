@@ -2,9 +2,7 @@ FROM teeks99/clang-ubuntu:7
 MAINTAINER Thomas Kent <docker@teeks99.com>
 
 # Pre-Req Repos
-RUN apt-get update \
- && apt-get install -y software-properties-common \
- && add-apt-repository -y ppa:git-core/ppa \
+RUN add-apt-repository -y ppa:git-core/ppa \
  && add-apt-repository -y ppa:anthony-justsoftwaresolutions/libcxx \
 # Install pre-reqs
  && apt-get update \
@@ -17,8 +15,8 @@ RUN apt-get update \
   python2.7 \
   python2.7-dev \
   python-numpy \
-  python3.5 \
-  python3.5-dev \
+  python3 \
+  python3-dev \
   python3-numpy \
   libjpeg-dev \
   libpng-dev \
