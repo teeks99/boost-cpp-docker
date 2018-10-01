@@ -1,4 +1,4 @@
-using clang : 7 : clang++-7 : <cxxflags>"-Wno-c99-extensions" ; #default same as 7~c++98
+using clang : 7 : clang++-7 : <cxxflags>"-Wno-c99-extensions" ; #default same as 7~gnu14
 using clang : 7~c++98 : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++98" ;
 using clang : 7~gnu98 : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=gnu++98" ;
 using clang : 7~c++11 : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++11" ;
@@ -11,6 +11,8 @@ using clang : 7~c++17~O2 : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++17
 using clang : 7~c++17~warn : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++17 -Wall -Wextra" ;
 using clang : 7~c++2a : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++2a" ;
 using clang : 7~gnu2a : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=gnu++2a" ;
+using clang : 7~c++2a~O2 : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++2a -O2" ;
+using clang : 7~c++2a~warn : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++2a -Wall -Wextra" ;
 using clang : 7~c++98~lc : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++98 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 using clang : 7~gnu98~lc : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=gnu++98 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 using clang : 7~c++11~lc : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++11 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
@@ -23,6 +25,8 @@ using clang : 7~c++17~lc~O2 : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c+
 using clang : 7~c++17~lc~warn : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++17 -stdlib=libc++ -isystem/usr/include/libcxxabi -Wall -Wextra" <linkflags>"-stdlib=libc++ -lc++abi" ;
 using clang : 7~c++2a~lc : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++2a -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 using clang : 7~gnu2a~lc : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=gnu++2a -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 7~c++2a~lc~O2 : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++2a -stdlib=libc++ -isystem/usr/include/libcxxabi -O2" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 7~c++2a~lc~warn : clang++-7 : <cxxflags>"-Wno-c99-extensions -std=c++2a -stdlib=libc++ -isystem/usr/include/libcxxabi -Wall -Wextra" <linkflags>"-stdlib=libc++ -lc++abi" ;
 
 
 
@@ -34,11 +38,10 @@ using python
 : # conditions
 ;
 
-using python 
+using python
 : 3.6 # version
 : # Interpreter/path to dir
 : /usr/include/python3.6 # includes
 : /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
-

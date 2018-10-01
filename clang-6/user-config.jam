@@ -1,4 +1,4 @@
-using clang : 6.0 : clang++-6.0 : <cxxflags>"-Wno-c99-extensions" ; #default same as 5.0~c++98
+using clang : 6.0 : clang++-6.0 : <cxxflags>"-Wno-c99-extensions" ; #default same as 6.0~gnu14
 using clang : 6.0~c++98 : clang++-6.0 : <cxxflags>"-Wno-c99-extensions -std=c++98" ;
 using clang : 6.0~gnu98 : clang++-6.0 : <cxxflags>"-Wno-c99-extensions -std=gnu++98" ;
 using clang : 6.0~c++11 : clang++-6.0 : <cxxflags>"-Wno-c99-extensions -std=c++11" ;
@@ -30,11 +30,10 @@ using python
 : # conditions
 ;
 
-using python 
+using python
 : 3.5 # version
 : # Interpreter/path to dir
 : /usr/include/python3.5 # includes
 : /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
-
