@@ -1,16 +1,34 @@
-using gcc : 8 : g++-8 : ; # Default is same as 7-std98
+using gcc : 8 : g++-8 : ;
 using gcc : 8~c++98 : g++-8 : <cxxflags>"-std=c++98" ;
+using gcc : 8~c++98~O2 : g++-8 : <cxxflags>"-std=c++98 -O2" ;
+using gcc : 8~c++98~warn : g++-8 : <cxxflags>"-std=c++98 -Wall -Wextra" ;
 using gcc : 8~gnu98 : g++-8 : <cxxflags>"-std=gnu++98" ;
+using gcc : 8~gnu98~O2 : g++-8 : <cxxflags>"-std=gnu++98 -O2" ;
+using gcc : 8~gnu98~warn : g++-8 : <cxxflags>"-std=gnu++98 -Wall -Wextra" ;
 using gcc : 8~c++11 : g++-8 : <cxxflags>"-std=c++11" ;
+using gcc : 8~c++11~O2 : g++-8 : <cxxflags>"-std=c++11 -O2" ;
+using gcc : 8~c++11~warn : g++-8 : <cxxflags>"-std=c++11 -Wall -Wextra" ;
 using gcc : 8~gnu11 : g++-8 : <cxxflags>"-std=gnu++11" ;
+using gcc : 8~gnu11~O2 : g++-8 : <cxxflags>"-std=gnu++11 -O2" ;
+using gcc : 8~gnu11~warn : g++-8 : <cxxflags>"-std=gnu++11 -Wall -Wextra" ;
 using gcc : 8~c++14 : g++-8 : <cxxflags>"-std=c++14" ;
+using gcc : 8~c++14~O2 : g++-8 : <cxxflags>"-std=c++14 -O2" ;
+using gcc : 8~c++14~warn : g++-8 : <cxxflags>"-std=c++14 -Wall -Wextra" ;
 using gcc : 8~gnu14 : g++-8 : <cxxflags>"-std=gnu++14" ;
+using gcc : 8~gnu14~O2 : g++-8 : <cxxflags>"-std=gnu++14 -O2" ;
+using gcc : 8~gnu14~warn : g++-8 : <cxxflags>"-std=gnu++14 -Wall -Wextra" ;
 using gcc : 8~c++17 : g++-8 : <cxxflags>"-std=c++17" ;
+using gcc : 8~c++17~O2 : g++-8 : <cxxflags>"-std=c++17 -O2" ;
+using gcc : 8~c++17~warn : g++-8 : <cxxflags>"-std=c++17 -Wall -Wextra" ;
 using gcc : 8~gnu17 : g++-8 : <cxxflags>"-std=gnu++17" ;
+using gcc : 8~gnu17~O2 : g++-8 : <cxxflags>"-std=gnu++17 -O2" ;
+using gcc : 8~gnu17~warn : g++-8 : <cxxflags>"-std=gnu++17 -Wall -Wextra" ;
 using gcc : 8~c++2a : g++-8 : <cxxflags>"-std=c++2a" ;
-using gcc : 8~gnu2a : g++-8 : <cxxflags>"-std=gnu++2a" ;
 using gcc : 8~c++2a~O2 : g++-8 : <cxxflags>"-std=c++2a -O2" ;
 using gcc : 8~c++2a~warn : g++-8 : <cxxflags>"-std=c++2a -Wall -Wextra" ;
+using gcc : 8~gnu2a : g++-8 : <cxxflags>"-std=gnu++2a" ;
+using gcc : 8~gnu2a~O2 : g++-8 : <cxxflags>"-std=gnu++2a -O2" ;
+using gcc : 8~gnu2a~warn : g++-8 : <cxxflags>"-std=gnu++2a -Wall -Wextra" ;
 
 
 using python
@@ -21,11 +39,10 @@ using python
 : # conditions
 ;
 
-using python 
+using python
 : 3.5 # version
 : # Interpreter/path to dir
 : /usr/include/python3.5 # includes
 : /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
-

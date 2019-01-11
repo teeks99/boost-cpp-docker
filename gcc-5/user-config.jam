@@ -1,14 +1,28 @@
-using gcc : 5 : g++-5 : ; # Default is same as 5~c++98
+using gcc : 5 : g++-5 : ;
 using gcc : 5~c++98 : g++-5 : <cxxflags>"-std=c++98" ;
+using gcc : 5~c++98~O2 : g++-5 : <cxxflags>"-std=c++98 -O2" ;
+using gcc : 5~c++98~warn : g++-5 : <cxxflags>"-std=c++98 -Wall -Wextra" ;
 using gcc : 5~gnu98 : g++-5 : <cxxflags>"-std=gnu++98" ;
+using gcc : 5~gnu98~O2 : g++-5 : <cxxflags>"-std=gnu++98 -O2" ;
+using gcc : 5~gnu98~warn : g++-5 : <cxxflags>"-std=gnu++98 -Wall -Wextra" ;
 using gcc : 5~c++11 : g++-5 : <cxxflags>"-std=c++11" ;
+using gcc : 5~c++11~O2 : g++-5 : <cxxflags>"-std=c++11 -O2" ;
+using gcc : 5~c++11~warn : g++-5 : <cxxflags>"-std=c++11 -Wall -Wextra" ;
 using gcc : 5~gnu11 : g++-5 : <cxxflags>"-std=gnu++11" ;
+using gcc : 5~gnu11~O2 : g++-5 : <cxxflags>"-std=gnu++11 -O2" ;
+using gcc : 5~gnu11~warn : g++-5 : <cxxflags>"-std=gnu++11 -Wall -Wextra" ;
 using gcc : 5~c++14 : g++-5 : <cxxflags>"-std=c++14" ;
+using gcc : 5~c++14~O2 : g++-5 : <cxxflags>"-std=c++14 -O2" ;
+using gcc : 5~c++14~warn : g++-5 : <cxxflags>"-std=c++14 -Wall -Wextra" ;
 using gcc : 5~gnu14 : g++-5 : <cxxflags>"-std=gnu++14" ;
+using gcc : 5~gnu14~O2 : g++-5 : <cxxflags>"-std=gnu++14 -O2" ;
+using gcc : 5~gnu14~warn : g++-5 : <cxxflags>"-std=gnu++14 -Wall -Wextra" ;
 using gcc : 5~c++1z : g++-5 : <cxxflags>"-std=c++1z" ;
-using gcc : 5~gnu1z : g++-5 : <cxxflags>"-std=gnu++1z" ;
 using gcc : 5~c++1z~O2 : g++-5 : <cxxflags>"-std=c++1z -O2" ;
 using gcc : 5~c++1z~warn : g++-5 : <cxxflags>"-std=c++1z -Wall -Wextra" ;
+using gcc : 5~gnu1z : g++-5 : <cxxflags>"-std=gnu++1z" ;
+using gcc : 5~gnu1z~O2 : g++-5 : <cxxflags>"-std=gnu++1z -O2" ;
+using gcc : 5~gnu1z~warn : g++-5 : <cxxflags>"-std=gnu++1z -Wall -Wextra" ;
 
 
 using python
