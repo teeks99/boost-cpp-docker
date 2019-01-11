@@ -4,7 +4,7 @@ using python
 : 2.7 # version
 : # Interpreter/path to dir
 : /usr/include/python2.7 # includes
-: /usr/lib/ # libs
+: /usr/lib # libs
 : # conditions
 ;
 
