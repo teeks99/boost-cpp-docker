@@ -1,22 +1,35 @@
-#using gcc : 4.8 : g++-4.8 : <cxxflags>"-Wno-c99-extensions" ; 
-using clang : 3.5 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions" ; #default same as 3.5~c++98
+using clang : 3.5 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions" ;
 using clang : 3.5~c++98 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++98" ;
+using clang : 3.5~c++98~O2 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++98 -O2" ;
+using clang : 3.5~c++98~warn : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++98 -Wall -Wextra" ;
 using clang : 3.5~gnu98 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++98" ;
+using clang : 3.5~gnu98~O2 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++98 -O2" ;
+using clang : 3.5~gnu98~warn : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++98 -Wall -Wextra" ;
 using clang : 3.5~c++11 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++11" ;
+using clang : 3.5~c++11~O2 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++11 -O2" ;
+using clang : 3.5~c++11~warn : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++11 -Wall -Wextra" ;
 using clang : 3.5~gnu11 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++11" ;
+using clang : 3.5~gnu11~O2 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++11 -O2" ;
+using clang : 3.5~gnu11~warn : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++11 -Wall -Wextra" ;
 using clang : 3.5~c++14 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++14" ;
+using clang : 3.5~c++14~O2 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++14 -O2" ;
+using clang : 3.5~c++14~warn : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++14 -Wall -Wextra" ;
 using clang : 3.5~gnu14 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++14" ;
+using clang : 3.5~gnu14~O2 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++14 -O2" ;
+using clang : 3.5~gnu14~warn : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++14 -Wall -Wextra" ;
 using clang : 3.5~c++1z : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++1z" ;
-using clang : 3.5~gnu1z : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++1z" ;
 using clang : 3.5~c++1z~O2 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++1z -O2" ;
 using clang : 3.5~c++1z~warn : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=c++1z -Wall -Wextra" ;
+using clang : 3.5~gnu1z : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++1z" ;
+using clang : 3.5~gnu1z~O2 : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++1z -O2" ;
+using clang : 3.5~gnu1z~warn : clang++-3.5 : <cxxflags>"-Wno-c99-extensions -std=gnu++1z -Wall -Wextra" ;
 
 
 using python
 : 2.7 # version
 : # Interpreter/path to dir
 : /usr/include/python2.7 # includes
-: /usr/lib # libs
+: /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
 
@@ -24,7 +37,7 @@ using python
 : 3.4 # version
 : # Interpreter/path to dir
 : /usr/include/python3.4 # includes
-: /usr/lib # libs
+: /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
 

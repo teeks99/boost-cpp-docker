@@ -1,17 +1,23 @@
-using gcc : 4.4 : g++-4.4 : ; # Default is same as 4.4~c++98
+using gcc : 4.4 : g++-4.4 : ;
 using gcc : 4.4~c++98 : g++-4.4 : <cxxflags>"-std=c++98" ;
+using gcc : 4.4~c++98~O2 : g++-4.4 : <cxxflags>"-std=c++98 -O2" ;
+using gcc : 4.4~c++98~warn : g++-4.4 : <cxxflags>"-std=c++98 -Wall -Wextra" ;
 using gcc : 4.4~gnu98 : g++-4.4 : <cxxflags>"-std=gnu++98" ;
+using gcc : 4.4~gnu98~O2 : g++-4.4 : <cxxflags>"-std=gnu++98 -O2" ;
+using gcc : 4.4~gnu98~warn : g++-4.4 : <cxxflags>"-std=gnu++98 -Wall -Wextra" ;
 using gcc : 4.4~c++0x : g++-4.4 : <cxxflags>"-std=c++0x" ;
-using gcc : 4.4~gnu0x : g++-4.4 : <cxxflags>"-std=gnu++0x" ;
 using gcc : 4.4~c++0x~O2 : g++-4.4 : <cxxflags>"-std=c++0x -O2" ;
 using gcc : 4.4~c++0x~warn : g++-4.4 : <cxxflags>"-std=c++0x -Wall -Wextra" ;
+using gcc : 4.4~gnu0x : g++-4.4 : <cxxflags>"-std=gnu++0x" ;
+using gcc : 4.4~gnu0x~O2 : g++-4.4 : <cxxflags>"-std=gnu++0x -O2" ;
+using gcc : 4.4~gnu0x~warn : g++-4.4 : <cxxflags>"-std=gnu++0x -Wall -Wextra" ;
 
 
 using python
 : 2.7 # version
 : # Interpreter/path to dir
 : /usr/include/python2.7 # includes
-: /usr/lib # libs
+: /usr/lib/ # libs
 : # conditions
 ;
 
