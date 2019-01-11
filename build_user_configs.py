@@ -1,4 +1,5 @@
 from string import Template
+import os
 
 clang_mandatory =  "-Wno-c99-extensions"
 expand = {
@@ -52,8 +53,14 @@ def make_toolset(compiler, version, config, cfgtype, extra=None, libcxx_cfg=None
     if cfgtype == "gnu++":
         short_conf = "gnu" + config
 
-    t = "using {compiler} : {version}~{short_conf} : {cmd}-{version} :".format(
-        compiler=compiler, version=version, short_conf=short_conf, cmd=compiler_cmd[compiler])
+    ver = version + "~" + short_conf
+    if libcxx_cfg:
+        ver += "~lc"
+    if extra:
+        ver += "~" + extra
+
+    t = "using {compiler} : {ver} : {cmd}-{version} : ".format(
+        compiler=compiler, ver=ver, version=version, cmd=compiler_cmd[compiler])
     t += '<cxxflags>"'
     if compiler == "clang":
         t += clang_mandatory + " "
@@ -79,21 +86,25 @@ def build_configs():
 
         compiler_type, version = compiler.split("-")
 
-        toolsets = "using {compiler} : {version} : {cmd}-{version} : ;\n".format(
-            compiler=compiler, version=version, cmd=compiler_cmd[compiler])
+        toolsets = "using {compiler} : {version} : {cmd}-{version} : ".format(
+            compiler=compiler_type, version=version, cmd=compiler_cmd[compiler_type])
+        if compiler_type == "clang":
+            toolsets += '<cxxflags>"-Wno-c99-extensions" '
+        toolsets += ";\n"
 
         for config in options["configs"]:
             for cfgtype in types:
-                toolsets += make_toolset(compiler, version, config, cfgtype)
+                toolsets += make_toolset(compiler_type, version, config, cfgtype)
                 for extra in extras:
-                    toolsets += make_toolset(compiler, version, config, cfgtype, extra)
+                    toolsets += make_toolset(compiler_type, version, config, cfgtype, extra)
 
                 if "libcxx" in options:
-                    toolsets += make_toolset(compiler, version, config, cfgtype, libcxx_cfg=options["libcxx"])
+                    toolsets += make_toolset(compiler_type, version, config, cfgtype, libcxx_cfg=options["libcxx"])
                     for extra in extras:
-                        toolsets += make_toolset(compiler, version, config, cfgtype, extra, libcxx_cfg=options["libcxx"])
+                        toolsets += make_toolset(
+                            compiler_type, version, config, cfgtype, extra, libcxx_cfg=options["libcxx"])
 
-        template_file = "user-config.jam.{distro}.template".format(options["distro"])
+        template_file = "user-config.jam.{distro}.template".format(distro=options["distro"])
         with open(template_file, "r") as f:
             ts = f.read()
 
