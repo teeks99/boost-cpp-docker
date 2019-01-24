@@ -35,6 +35,7 @@ compilers = {
     "clang-6.0":{"distro": "xenial", "configs": ["98", "11", "14", "17"], "libcxx":"manual"},
     "clang-7":{"distro": "bionic", "configs": ["98", "11", "14", "17", "2a"], "libcxx":"manual"},
     "clang-8":{"distro": "bionic", "configs": ["98", "11", "14", "17", "2a"], "libcxx":"manual"},
+    "clang-9":{"distro": "bionic", "configs": ["98", "11", "14", "17", "2a"], "libcxx":"manual"},
     "gcc-4.4":{"distro": "precise", "configs": ["98", "0x"]},
     "gcc-4.5":{"distro": "precise", "configs": ["98", "0x"]},
     "gcc-4.6":{"distro": "precise", "configs": ["98", "0x"]},
