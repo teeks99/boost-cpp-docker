@@ -1,4 +1,4 @@
-FROM teeks99/clang-ubuntu:8
+FROM teeks99/clang-ubuntu:9
 MAINTAINER Thomas Kent <docker@teeks99.com>
 
 # Pre-Req Repos
