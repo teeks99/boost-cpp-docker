@@ -1,3 +1,4 @@
+using gcc : 4.8 : g++-4.8 : ;
 using gcc : 4.6 : g++-4.6 : ;
 using gcc : 4.6~c++98 : g++-4.6 : <cxxflags>"-std=c++98" ;
 using gcc : 4.6~c++98~O2 : g++-4.6 : <cxxflags>"-std=c++98 -O2" ;
@@ -17,15 +18,15 @@ using python
 : 2.7 # version
 : # Interpreter/path to dir
 : /usr/include/python2.7 # includes
-: /usr/lib # libs
+: /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
 
 using python 
-: 3.2 # version
+: 3.4 # version
 : # Interpreter/path to dir
-: /usr/include/python3.2 # includes
-: /usr/lib # libs
+: /usr/include/python3.4 # includes
+: /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
 
