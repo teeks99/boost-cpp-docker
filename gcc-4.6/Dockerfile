@@ -3,8 +3,7 @@ MAINTAINER Thomas Kent <teeks99@yahoo.com>
 
 # Enable future toolchain PPA
 RUN apt-get update \
- && apt-get install -y python-software-properties \
- && add-apt-repository -y ppa:git-core/ppa \
+ && apt-get install -y software-properties-common \
 
 # Install pre-reqs
  && apt-get update \
@@ -15,8 +14,8 @@ RUN apt-get update \
   python \
   python2.7 \
   python2.7-dev \
-  python3.2 \
-  python3.2-dev \
+  python3.4 \
+  python3.4-dev \
   libbz2-dev \
   zlib1g-dev
 
