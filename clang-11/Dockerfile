@@ -1,10 +1,8 @@
 FROM teeks99/clang-ubuntu:11
-MAINTAINER Thomas Kent <docker@teeks99.com>
+LABEL maintainer="Thomas Kent <docker@teeks99.com>"
 
-# Pre-Req Repos
-RUN add-apt-repository -y ppa:git-core/ppa \
 # Install pre-reqs
- && apt-get update \
+RUN apt-get update \
  && apt-get install -y \
   ca-certificates \
   build-essential \

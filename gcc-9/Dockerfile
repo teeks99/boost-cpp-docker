@@ -1,12 +1,8 @@
 FROM teeks99/gcc-ubuntu:9
 MAINTAINER Thomas Kent <docker@teeks99.com>
 
-# Pre-Req Repos
+# Install Pre Reqs
 RUN apt-get update \
- && apt-get install -y software-properties-common \
- && add-apt-repository -y ppa:git-core/ppa \
-# Install pre-reqs
- && apt-get update \
  && apt-get install -y \
   ca-certificates \
   build-essential \
