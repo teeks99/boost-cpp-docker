@@ -12,8 +12,8 @@ RUN apt-get update \
   python2.7 \
   python2.7-dev \
   python-numpy \
-  python3.7 \
-  python3.7-dev \
+  python3 \
+  python3-dev \
   python3-numpy \
   libjpeg-dev \
   libpng-dev \
