@@ -73,7 +73,7 @@ using python
 using python
 : 3.6 # version
 : # Interpreter/path to dir
-: /usr/include/python3.6 # includes
+: /usr/include/python3.8 # includes
 : /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
