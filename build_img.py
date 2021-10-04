@@ -126,7 +126,7 @@ def build_one(version):
     if not options.no_tag_timestamp:
         time_tag = tag_timestamp(base_tag, version)
 
-    if not options.no_latest:
+    if options.latest:
         latest_tag = tag_latest(base_tag)
 
     if options.push:
@@ -158,8 +158,8 @@ def set_options():
     parser.add_argument(
         "--no-tag-timestamp", action="store_true", help="only version tag")
     parser.add_argument(
-        "--no-latest", action="store_true",
-        help="don't update each to latest tag, whichever version is"
+        "--latest", action="store_true",
+        help="update each to latest tag, whichever version is"
         + " specified last will win")
     parser.add_argument(
         "-r", "--repo", default="test/boost-cpp",
