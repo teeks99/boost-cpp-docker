@@ -59,6 +59,18 @@ using clang : 14~gnu20~warn : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=g
 using clang : 14~gnu20~lc : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++20 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 using clang : 14~gnu20~lc~O2 : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++20 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 using clang : 14~gnu20~lc~warn : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++20 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 14~c++2b : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=c++2b" ;
+using clang : 14~c++2b~O2 : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=c++2b -O2" ;
+using clang : 14~c++2b~warn : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=c++2b -Wall -Wextra" ;
+using clang : 14~c++2b~lc : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=c++2b -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 14~c++2b~lc~O2 : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=c++2b -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 14~c++2b~lc~warn : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=c++2b -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 14~gnu2b : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++2b" ;
+using clang : 14~gnu2b~O2 : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++2b -O2" ;
+using clang : 14~gnu2b~warn : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++2b -Wall -Wextra" ;
+using clang : 14~gnu2b~lc : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++2b -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 14~gnu2b~lc~O2 : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++2b -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 14~gnu2b~lc~warn : clang++-14 : <cxxflags>"-Wno-c99-extensions -std=gnu++2b -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 
 
 
@@ -71,7 +83,7 @@ using python
 ;
 
 using python
-: 3.6 # version
+: 3.8 # version
 : # Interpreter/path to dir
 : /usr/include/python3.8 # includes
 : /usr/lib/x86_64-linux-gnu # libs
