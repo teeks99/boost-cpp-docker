@@ -20,7 +20,7 @@ versions = [
     "clang-7", "clang-8", "clang-9", "clang-10",
     "gcc-8",
     # Focal
-    "clang-11", "clang-12", "clang-13", "clang-14",
+    "clang-11", "clang-12", "clang-13", "clang-14", "clang-15",
     "gcc-9", "gcc-10", "gcc-11"
     ]
 
