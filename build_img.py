@@ -163,7 +163,8 @@ def set_options():
         + " specified last will win")
     parser.add_argument(
         "-r", "--repo", default="test/boost-cpp",
-        help="repo to build for and push to")
+        help="repo to build for and push to. Defaults to test/boost-cpp, " +
+        "use teeks99/boost-cpp-docker for dockerhub")
     parser.add_argument(
         "-p", "--push", action="store_true", help="push to dockerhub")
     parser.add_argument(
