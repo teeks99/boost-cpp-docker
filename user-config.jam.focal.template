@@ -1,0 +1,16 @@
+
+using python
+: 2.7 # version
+: # Interpreter/path to dir
+: /usr/include/python2.7 # includes
+: /usr/lib/x86_64-linux-gnu # libs
+: # conditions
+;
+
+using python
+: 3.8 # version
+: # Interpreter/path to dir
+: /usr/include/python3.8 # includes
+: /usr/lib/x86_64-linux-gnu # libs
+: # conditions
+;

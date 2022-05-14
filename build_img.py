@@ -21,19 +21,12 @@ versions = [
     "gcc-8",
     # Focal
     "clang-11", "clang-12", "clang-13", "clang-14", "clang-15",
-    "gcc-9", "gcc-10", "gcc-11"
+    "gcc-9", "gcc-10", "gcc-11",
+    # Jammy
+    "gcc-12"
     ]
 
 test_versions = {}
-
-
-def update_base_images():
-    if not options.no_update_base:
-        # subprocess.check_call("docker pull ubuntu:precise", shell=True)
-        subprocess.check_call("docker pull ubuntu:trusty", shell=True)
-        subprocess.check_call("docker pull ubuntu:xenial", shell=True)
-        subprocess.check_call("docker pull ubuntu:bionic", shell=True)
-        subprocess.check_call("docker pull ubuntu:focal", shell=True)
 
 
 def build(version):
@@ -43,7 +36,7 @@ def build(version):
     if options.no_force:
         force = ""
 
-    cmd = f"docker build {force} --tag {tag} {version}"
+    cmd = f"docker build --pull {force} --tag {tag} {version}"
     print(cmd)
     try:
         subprocess.check_call(cmd, shell=True)
@@ -146,9 +139,6 @@ def set_options():
         help="Use one of more times to specify the versions to run, skip"
         + " for all")
     parser.add_argument(
-        "--no-update-base", action="store_true",
-        help="Don't update the base images")
-    parser.add_argument(
         "--no-build", action="store_true", help="skip build step")
     parser.add_argument(
         "--no-force", action="store_true",
@@ -181,8 +171,6 @@ def run():
     if options.version:
         global versions
         versions = options.version
-
-    update_base_images()
 
     all()
 
