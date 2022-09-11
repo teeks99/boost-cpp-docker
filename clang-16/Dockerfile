@@ -8,10 +8,8 @@ RUN apt-get update \
   build-essential \
   git \
   wget \
-  python \
   python2.7 \
   python2.7-dev \
-  python-numpy \
   python3 \
   python3-dev \
   python3-numpy \
