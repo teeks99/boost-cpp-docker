@@ -40,9 +40,9 @@ using python
 ;
 
 using python
-: 3.8 # version
+: 3.10 # version
 : # Interpreter/path to dir
-: /usr/include/python3.8 # includes
+: /usr/include/python3.10 # includes
 : /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
