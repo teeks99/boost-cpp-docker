@@ -38,17 +38,9 @@ using gcc : 14~gnu2b~warn :  g++-14 : <cxxflags>"-std=gnu++2b -Wall -Wextra" ;
 
 
 using python
-: 2.7 # version
+: 3.12 # version
 : # Interpreter/path to dir
-: /usr/include/python2.7 # includes
-: /usr/lib/x86_64-linux-gnu # libs
-: # conditions
-;
-
-using python
-: 3.10 # version
-: # Interpreter/path to dir
-: /usr/include/python3.10 # includes
+: /usr/include/python3.12 # includes
 : /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
