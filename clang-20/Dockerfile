@@ -1,4 +1,4 @@
-FROM teeks99/clang-ubuntu:17
+FROM teeks99/clang-ubuntu:20
 LABEL maintainer="Thomas Kent <docker@teeks99.com>"
 
 # Install pre-reqs

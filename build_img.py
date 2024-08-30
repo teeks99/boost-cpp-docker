@@ -25,8 +25,10 @@ versions = [
     "clang-11", "clang-12", "clang-13", "clang-14",
     "gcc-9", "gcc-10", "gcc-11",
     # Jammy
-    "clang-15", "clang-16", "clang-16",
-    "gcc-12", "gcc-13"
+    "clang-15", "clang-16", "clang-16", "clang-17"
+    "gcc-12", "gcc-13",
+    # Noble
+    "clang-18", "clang-19", "clang-20"
     ]
 
 test_versions = {}

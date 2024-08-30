@@ -73,19 +73,10 @@ using clang : 18~gnu2b~lc~O2 : clang++-18 : <cxxflags>"-Wno-c99-extensions -std=
 using clang : 18~gnu2b~lc~warn : clang++-18 : <cxxflags>"-Wno-c99-extensions -std=gnu++2b -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 
 
-
 using python
-: 2.7 # version
+: 3.12 # version
 : # Interpreter/path to dir
-: /usr/include/python2.7 # includes
-: /usr/lib/x86_64-linux-gnu # libs
-: # conditions
-;
-
-using python
-: 3.10 # version
-: # Interpreter/path to dir
-: /usr/include/python3.10 # includes
+: /usr/include/python3.12 # includes
 : /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
