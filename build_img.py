@@ -28,7 +28,8 @@ versions = [
     "clang-15", "clang-16", "clang-16", "clang-17"
     "gcc-12", "gcc-13",
     # Noble
-    "clang-18", "clang-19", "clang-20"
+    "clang-18", "clang-19", "clang-20",
+    "gcc-14", "gcc-15"
     ]
 
 test_versions = {}
