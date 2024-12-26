@@ -35,7 +35,7 @@ RUN apt-get update \
   lzma-dev \
   tk-dev \
   uuid-dev \
-# Pyhton 2.7
+# Python 2.7
  && cd /tmp \
  && wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz \
  && tar -xf Python-2.7.18.tgz \
