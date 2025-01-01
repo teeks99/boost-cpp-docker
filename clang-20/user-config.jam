@@ -65,12 +65,24 @@ using clang : 20~c++23~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c
 using clang : 20~c++23~lc : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++23 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 using clang : 20~c++23~lc~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++23 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 using clang : 20~c++23~lc~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++23 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
-using clang : 20~gnu2b : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23" ;
-using clang : 20~gnu2b~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -O2" ;
-using clang : 20~gnu2b~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -Wall -Wextra" ;
-using clang : 20~gnu2b~lc : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
-using clang : 20~gnu2b~lc~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
-using clang : 20~gnu2b~lc~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~gnu23 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23" ;
+using clang : 20~gnu23~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -O2" ;
+using clang : 20~gnu23~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -Wall -Wextra" ;
+using clang : 20~gnu23~lc : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~gnu23~lc~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~gnu23~lc~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~c++2c : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++2c" ;
+using clang : 20~c++2c~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++2c -O2" ;
+using clang : 20~c++2c~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++2c -Wall -Wextra" ;
+using clang : 20~c++2c~lc : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++2c -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~c++2c~lc~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++2c -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~c++2c~lc~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=c++2c -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~gnu2c : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++2c" ;
+using clang : 20~gnu2c~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++2c -O2" ;
+using clang : 20~gnu2c~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++2c -Wall -Wextra" ;
+using clang : 20~gnu2c~lc : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++2c -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~gnu2c~lc~O2 : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++2c -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 20~gnu2c~lc~warn : clang++-20 : <cxxflags>"-Wno-c99-extensions -std=gnu++2c -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
 
 
 using python
