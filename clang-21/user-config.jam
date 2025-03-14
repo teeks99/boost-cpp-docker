@@ -1,0 +1,94 @@
+using clang : 21 : clang++-21 : <cxxflags>"-Wno-c99-extensions" ;
+using clang : 21~c++98 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++98" ;
+using clang : 21~c++98~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++98 -O2" ;
+using clang : 21~c++98~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++98 -Wall -Wextra" ;
+using clang : 21~c++98~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++98 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++98~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++98 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++98~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++98 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu98 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++98" ;
+using clang : 21~gnu98~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++98 -O2" ;
+using clang : 21~gnu98~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++98 -Wall -Wextra" ;
+using clang : 21~gnu98~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++98 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu98~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++98 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu98~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++98 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++11 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++11" ;
+using clang : 21~c++11~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++11 -O2" ;
+using clang : 21~c++11~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++11 -Wall -Wextra" ;
+using clang : 21~c++11~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++11 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++11~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++11 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++11~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++11 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu11 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++11" ;
+using clang : 21~gnu11~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++11 -O2" ;
+using clang : 21~gnu11~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++11 -Wall -Wextra" ;
+using clang : 21~gnu11~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++11 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu11~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++11 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu11~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++11 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++14 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++14" ;
+using clang : 21~c++14~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++14 -O2" ;
+using clang : 21~c++14~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++14 -Wall -Wextra" ;
+using clang : 21~c++14~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++14 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++14~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++14 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++14~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++14 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu14 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++14" ;
+using clang : 21~gnu14~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++14 -O2" ;
+using clang : 21~gnu14~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++14 -Wall -Wextra" ;
+using clang : 21~gnu14~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++14 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu14~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++14 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu14~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++14 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++17 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++17" ;
+using clang : 21~c++17~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++17 -O2" ;
+using clang : 21~c++17~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++17 -Wall -Wextra" ;
+using clang : 21~c++17~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++17 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++17~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++17 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++17~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++17 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu17 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++17" ;
+using clang : 21~gnu17~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++17 -O2" ;
+using clang : 21~gnu17~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++17 -Wall -Wextra" ;
+using clang : 21~gnu17~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++17 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu17~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++17 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu17~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++17 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++20 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++20" ;
+using clang : 21~c++20~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++20 -O2" ;
+using clang : 21~c++20~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++20 -Wall -Wextra" ;
+using clang : 21~c++20~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++20 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++20~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++20 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++20~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++20 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu20 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++20" ;
+using clang : 21~gnu20~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++20 -O2" ;
+using clang : 21~gnu20~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++20 -Wall -Wextra" ;
+using clang : 21~gnu20~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++20 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu20~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++20 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu20~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++20 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++23 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++23" ;
+using clang : 21~c++23~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++23 -O2" ;
+using clang : 21~c++23~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++23 -Wall -Wextra" ;
+using clang : 21~c++23~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++23 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++23~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++23 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++23~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++23 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu23 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++23" ;
+using clang : 21~gnu23~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -O2" ;
+using clang : 21~gnu23~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -Wall -Wextra" ;
+using clang : 21~gnu23~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu23~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu23~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++23 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++26 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++26" ;
+using clang : 21~c++26~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++26 -O2" ;
+using clang : 21~c++26~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++26 -Wall -Wextra" ;
+using clang : 21~c++26~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++26 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++26~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++26 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~c++26~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=c++26 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu26 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++26" ;
+using clang : 21~gnu26~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++26 -O2" ;
+using clang : 21~gnu26~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++26 -Wall -Wextra" ;
+using clang : 21~gnu26~lc : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++26 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu26~lc~O2 : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++26 -O2 -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+using clang : 21~gnu26~lc~warn : clang++-21 : <cxxflags>"-Wno-c99-extensions -std=gnu++26 -Wall -Wextra -stdlib=libc++ -isystem/usr/include/libcxxabi" <linkflags>"-stdlib=libc++ -lc++abi" ;
+
+
+using python
+: 3.12 # version
+: # Interpreter/path to dir
+: /usr/include/python3.12 # includes
+: /usr/lib/x86_64-linux-gnu # libs
+: # conditions
+;
