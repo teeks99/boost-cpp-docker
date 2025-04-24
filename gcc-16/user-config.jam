@@ -1,0 +1,52 @@
+using gcc : 16 :  g++-16 : ;
+using gcc : 16~c++98 :  g++-16 : <cxxflags>"-std=c++98" ;
+using gcc : 16~c++98~O2 :  g++-16 : <cxxflags>"-std=c++98 -O2" ;
+using gcc : 16~c++98~warn :  g++-16 : <cxxflags>"-std=c++98 -Wall -Wextra" ;
+using gcc : 16~gnu98 :  g++-16 : <cxxflags>"-std=gnu++98" ;
+using gcc : 16~gnu98~O2 :  g++-16 : <cxxflags>"-std=gnu++98 -O2" ;
+using gcc : 16~gnu98~warn :  g++-16 : <cxxflags>"-std=gnu++98 -Wall -Wextra" ;
+using gcc : 16~c++11 :  g++-16 : <cxxflags>"-std=c++11" ;
+using gcc : 16~c++11~O2 :  g++-16 : <cxxflags>"-std=c++11 -O2" ;
+using gcc : 16~c++11~warn :  g++-16 : <cxxflags>"-std=c++11 -Wall -Wextra" ;
+using gcc : 16~gnu11 :  g++-16 : <cxxflags>"-std=gnu++11" ;
+using gcc : 16~gnu11~O2 :  g++-16 : <cxxflags>"-std=gnu++11 -O2" ;
+using gcc : 16~gnu11~warn :  g++-16 : <cxxflags>"-std=gnu++11 -Wall -Wextra" ;
+using gcc : 16~c++14 :  g++-16 : <cxxflags>"-std=c++14" ;
+using gcc : 16~c++14~O2 :  g++-16 : <cxxflags>"-std=c++14 -O2" ;
+using gcc : 16~c++14~warn :  g++-16 : <cxxflags>"-std=c++14 -Wall -Wextra" ;
+using gcc : 16~gnu14 :  g++-16 : <cxxflags>"-std=gnu++14" ;
+using gcc : 16~gnu14~O2 :  g++-16 : <cxxflags>"-std=gnu++14 -O2" ;
+using gcc : 16~gnu14~warn :  g++-16 : <cxxflags>"-std=gnu++14 -Wall -Wextra" ;
+using gcc : 16~c++17 :  g++-16 : <cxxflags>"-std=c++17" ;
+using gcc : 16~c++17~O2 :  g++-16 : <cxxflags>"-std=c++17 -O2" ;
+using gcc : 16~c++17~warn :  g++-16 : <cxxflags>"-std=c++17 -Wall -Wextra" ;
+using gcc : 16~gnu17 :  g++-16 : <cxxflags>"-std=gnu++17" ;
+using gcc : 16~gnu17~O2 :  g++-16 : <cxxflags>"-std=gnu++17 -O2" ;
+using gcc : 16~gnu17~warn :  g++-16 : <cxxflags>"-std=gnu++17 -Wall -Wextra" ;
+using gcc : 16~c++20 :  g++-16 : <cxxflags>"-std=c++20" ;
+using gcc : 16~c++20~O2 :  g++-16 : <cxxflags>"-std=c++20 -O2" ;
+using gcc : 16~c++20~warn :  g++-16 : <cxxflags>"-std=c++20 -Wall -Wextra" ;
+using gcc : 16~gnu20 :  g++-16 : <cxxflags>"-std=gnu++20" ;
+using gcc : 16~gnu20~O2 :  g++-16 : <cxxflags>"-std=gnu++20 -O2" ;
+using gcc : 16~gnu20~warn :  g++-16 : <cxxflags>"-std=gnu++20 -Wall -Wextra" ;
+using gcc : 16~c++23 :  g++-16 : <cxxflags>"-std=c++23" ;
+using gcc : 16~c++23~O2 :  g++-16 : <cxxflags>"-std=c++23 -O2" ;
+using gcc : 16~c++23~warn :  g++-16 : <cxxflags>"-std=c++23 -Wall -Wextra" ;
+using gcc : 16~gnu23 :  g++-16 : <cxxflags>"-std=gnu++23" ;
+using gcc : 16~gnu23~O2 :  g++-16 : <cxxflags>"-std=gnu++23 -O2" ;
+using gcc : 16~gnu23~warn :  g++-16 : <cxxflags>"-std=gnu++23 -Wall -Wextra" ;
+using gcc : 16~c++26 :  g++-16 : <cxxflags>"-std=c++26" ;
+using gcc : 16~c++26~O2 :  g++-16 : <cxxflags>"-std=c++26 -O2" ;
+using gcc : 16~c++26~warn :  g++-16 : <cxxflags>"-std=c++26 -Wall -Wextra" ;
+using gcc : 16~gnu26 :  g++-16 : <cxxflags>"-std=gnu++26" ;
+using gcc : 16~gnu26~O2 :  g++-16 : <cxxflags>"-std=gnu++26 -O2" ;
+using gcc : 16~gnu26~warn :  g++-16 : <cxxflags>"-std=gnu++26 -Wall -Wextra" ;
+
+
+using python
+: 3.12 # version
+: # Interpreter/path to dir
+: /usr/include/python3.12 # includes
+: /usr/lib/x86_64-linux-gnu # libs
+: # conditions
+;
