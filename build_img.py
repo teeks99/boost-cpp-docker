@@ -59,7 +59,7 @@ def build(version):
     if options.no_force:
         force = ""
 
-    cmd = f"docker build {force} --tag {image.image} {version}"
+    cmd = f"docker build --pull {force} --tag {image.image} {version}"
     run_my_cmd(cmd)
     return image
 
