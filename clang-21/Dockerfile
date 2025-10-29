@@ -39,7 +39,7 @@ RUN apt-get update \
   && wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz \
   && tar -xf Python-2.7.18.tgz \
   && cd Python-2.7.18 \
-  && ./configure \
+  && ./configure --enable-shared \
   && make -j`nproc` \
   && make install \
 # Speed up fetch
