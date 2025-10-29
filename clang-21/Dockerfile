@@ -42,6 +42,7 @@ RUN apt-get update \
   && ./configure --enable-shared \
   && make -j`nproc` \
   && make install \
+  && ldconfig \
 # Speed up fetch
  && git config --global submodule.fetchJobs 40
 
