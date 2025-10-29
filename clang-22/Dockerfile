@@ -35,13 +35,14 @@ RUN apt-get update \
   tk-dev \
   uuid-dev \
 # Python 2.7
-  && cd /tmp \
-  && wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz \
-  && tar -xf Python-2.7.18.tgz \
-  && cd Python-2.7.18 \
-  && ./configure \
-  && make -j`nproc` \
-  && make install \
+ && cd /tmp \
+ && wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz \
+ && tar -xf Python-2.7.18.tgz \
+ && cd Python-2.7.18 \
+ && ./configure --enable-shared \
+ && make -j`nproc` \
+ && make install \
+ && ldconfig \
 # Speed up fetch
  && git config --global submodule.fetchJobs 40
 
