@@ -28,8 +28,9 @@ versions = [
     "clang-15", "clang-16", "clang-16", "clang-17"
     "gcc-12", "gcc-13",
     # Noble
-    "clang-18", "clang-19", "clang-20",
-    "gcc-14", "gcc-15"
+    "clang-18", "clang-19", "clang-20", "clang-21", "clang-22", "clang-23",
+    "gcc-14", "gcc-15",
+    "filc-0"
     ]
 
 test_versions = {}
@@ -59,7 +60,11 @@ def build(version):
     if options.no_force:
         force = ""
 
-    cmd = f"docker build --pull {force} --tag {image.image} {version}"
+    pull = "--pull"
+    if options.no_pull_base:
+        pull = ""
+
+    cmd = f"docker build {pull} {force} --tag {image.image} {version}"
     run_my_cmd(cmd)
     return image
 
@@ -181,6 +186,9 @@ def set_options():
     parser.add_argument(
         "--no-force", action="store_true",
         help="don't force an update, use existing layers")
+    parser.add_argument(
+        "--no-pull-base", action="store_true",
+        help="Don't require pulling the base image")
     parser.add_argument(
         "--no-test", action="store_true", help="skip the test step")
     parser.add_argument(
