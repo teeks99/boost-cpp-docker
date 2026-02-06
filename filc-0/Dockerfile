@@ -12,7 +12,13 @@ COPY --from=pysrc /usr/local/bin/python2 /usr/local/bin/python2-config /usr/loca
 RUN ldconfig
 
 # Speed up fetch
-RUN git config --global submodule.fetchJobs 40
+RUN echo Staring build \
+ # Remove the default 'ubuntu' non-root user, we will create our own at runtime
+ && touch /var/mail/ubuntu \
+ && chown ubuntu /var/mail/ubuntu \
+ && userdel -r ubuntu \
+ # Speed up fetch
+ &&git config --global submodule.fetchJobs 40
 
 # Add the tool configs
 ADD user-config.jam /
