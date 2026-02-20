@@ -1,6 +1,6 @@
 FROM teeks99/python2:ubuntu24.04 AS pysrc
 
-FROM teeks99/clang-ubuntu:22
+FROM teeks99/clang-ubuntu:23
 LABEL maintainer="Thomas Kent <docker@teeks99.com>"
 
 # Copy in the build of python 2.7
