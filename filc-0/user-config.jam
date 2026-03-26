@@ -1,1 +1,1 @@
-using clang : : fil++ ;
+using clang : : /opt/fil/bin/fil++ : <cxxflags>"-I/opt/fil/include/x86_64-unknown-linux-gnu/c++/v1" <cxxstd>20 ;
