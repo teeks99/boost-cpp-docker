@@ -1,5 +1,5 @@
 FROM teeks99/gcc-ubuntu:6
-MAINTAINER Thomas Kent <teeks99@yahoo.com>
+LABEL org.opencontainers.image.authors="Thomas Kent <docker@teeks99.com>"
 
 # Enable PPA
 RUN apt-get update \
@@ -14,8 +14,8 @@ RUN apt-get update \
   python \
   python2.7 \
   python2.7-dev \
-  python3.4 \
-  python3.4-dev \
+  python3.8 \
+  python3.8-dev \
   libbz2-dev \
   zlib1g-dev
 

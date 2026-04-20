@@ -1,5 +1,5 @@
 FROM teeks99/gcc-ubuntu:8
-MAINTAINER Thomas Kent <docker@teeks99.com>
+LABEL org.opencontainers.image.authors="Thomas Kent <docker@teeks99.com>"
 
 # Pre-Req Repos
 RUN apt-get update \
@@ -16,8 +16,8 @@ RUN apt-get update \
   python2.7 \
   python2.7-dev \
   python-numpy \
-  python3.7 \
-  python3.7-dev \
+  python3.8 \
+  python3.8-dev \
   python3-numpy \
   libjpeg-dev \
   libpng-dev \

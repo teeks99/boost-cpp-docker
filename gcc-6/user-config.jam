@@ -33,11 +33,10 @@ using python
 : # conditions
 ;
 
-using python 
-: 3.4 # version
+using python
+: 3.8 # version
 : # Interpreter/path to dir
-: /usr/include/python3.4 # includes
+: /usr/include/python3.8 # includes
 : /usr/lib/x86_64-linux-gnu # libs
 : # conditions
 ;
-
