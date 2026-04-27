@@ -1,4 +1,4 @@
-FROM teeks99/gcc-ubuntu:16
+FROM teeks99/gcc-ubuntu:17
 LABEL org.opencontainers.image.authors="Thomas Kent <docker@teeks99.com>"
 
 # Copy in the build of python 2.7
