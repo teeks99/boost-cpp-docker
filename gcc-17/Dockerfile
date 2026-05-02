@@ -1,3 +1,5 @@
+FROM teeks99/python2:ubuntu24.04 AS pysrc
+
 FROM teeks99/gcc-ubuntu:17
 LABEL org.opencontainers.image.authors="Thomas Kent <docker@teeks99.com>"
 
