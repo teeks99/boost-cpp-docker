@@ -1,0 +1,78 @@
+name: Build Boost C++ Docker Image
+
+on:
+  repository_dispatch:
+    types: [build-boost-image]
+  workflow_dispatch:
+    inputs:
+      compiler:
+        description: 'Compiler (e.g. gcc, clang)'
+        required: true
+        type: string
+      version:
+        description: 'Version (e.g. 16)'
+        required: true
+        type: string
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  COMPILER: ${{ github.event.client_payload.compiler || inputs.compiler }}
+  VERSION: ${{ github.event.client_payload.version || inputs.version }}
+
+jobs:
+  build-amd64:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and Push AMD64
+        run: |
+          python build_img.py -v ${{ env.COMPILER }}-${{ env.VERSION }} -r teeks99/boost-cpp-docker -p -T -l amd64_log.json --arch
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: amd64-log
+          path: amd64_log.json
+
+  build-arm64:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and Push ARM64
+        run: |
+          python build_img.py -v ${{ env.COMPILER }}-${{ env.VERSION }} -r teeks99/boost-cpp-docker -p -T -l arm64_log.json --arch
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: arm64-log
+          path: arm64_log.json
+
+  create-manifest:
+    needs: [build-amd64, build-arm64]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+      - name: Parse and Create Manifest
+        run: |
+          VERSION_STRING="${{ env.COMPILER }}-${{ env.VERSION }}"
+          AMD64_TAG=$(jq -r ".versions[\"${VERSION_STRING}\"].timestamp" amd64-log/amd64_log.json)
+          ARM64_TAG=$(jq -r ".versions[\"${VERSION_STRING}\"].timestamp" arm64-log/arm64_log.json)
+          echo "AMD64 tag: $AMD64_TAG"
+          echo "ARM64 tag: $ARM64_TAG"
+          python build_img.py -v $VERSION_STRING -r teeks99/boost-cpp-docker --manifest-only $AMD64_TAG $ARM64_TAG
